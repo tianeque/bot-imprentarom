@@ -4,6 +4,11 @@ const handleMessage = require('./handleMessage')
 const handlePostback = require('./handlePostback')
 
 //Funcion manejadora de eventos
+
+/* De acuerdo al tipo de informacion que recibamos, ya sea un message, un attachment, un postback 
+    es el comportamiento que nosotros vamos a tener.
+*/
+
 module.exports = function handleEvent(senderId, event){
     //detectando si es un texto
     if(event.message) {

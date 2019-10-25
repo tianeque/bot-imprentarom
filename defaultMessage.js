@@ -1,5 +1,6 @@
 const senderActions = require('./senderActions')
 const callSendApi = require('./callSendApi')
+const defaultMessageConfig = require('./defaultMessageConfig')
 
 module.exports = function defaultMessage(senderId) {
     const messageData = {
@@ -7,21 +8,11 @@ module.exports = function defaultMessage(senderId) {
             "id": senderId
         },
         "message": {
-            "text": "Hola soy un bot de messenger y te invito a utilizar nuestro menu, Anmary, debiera escribirse Anne Marie, pero tu madre te puso Anmary",
-            "quick_replies": [
-                {
-                    "content_type": "text",
-                    "title": "¿Quieres una Pizza?",
-                    "payload": "PIZZAS_PAYLOAD"
-                },
-                {
-                    "content_type": "text",
-                    "title": "Acerca de",
-                    "payload": "ABOUT_PAYLOAD"
-                }
-            ]
+            "text": defaultMessageConfig.message,
+            "quick_replies": defaultMessageConfig.quick_replies
         }
     }
     senderActions(senderId)
     callSendApi(messageData);
 }
+

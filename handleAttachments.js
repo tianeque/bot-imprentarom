@@ -1,5 +1,5 @@
 'use strict'
-
+// Funcion que detecta cada uno de los tipos de adjuntos que disponemos
 module.exports = function handleAttachments(senderId, event){
     let attachment_type = event.attachments[0].type
     switch (attachment_type) {
