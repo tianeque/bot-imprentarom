@@ -8,13 +8,13 @@ const boton1 = {
     "payload": "PIZZAS_PAYLOAD"
 }
 
-const boton2= {
+const boton2 = {
     "content_type": "text",
     "title": "Acerca de",
     "payload": "ABOUT_PAYLOAD"
 }
 
-const boton3= {
+const boton3 = {
     "content_type": "text",
     "title": "1/4 Carta",
     "payload": "1-4-CARTA_PAYLOAD"
